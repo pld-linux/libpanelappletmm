@@ -2,7 +2,7 @@ Summary:	C++ wrappers for libpanel-applet library
 Summary(pl):	Interfejsy C++ dla biblioteki libpanel-applet
 Name:		libpanelappletmm
 Version:	2.5.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
@@ -10,7 +10,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.t
 URL:		http://www.gnome.org/
 BuildRequires:	gconfmm-devel >= 2.5.1
 BuildRequires:	gnome-panel-devel >= 2.6.0
-BuildRequires:	gtkmm-devel >= 2.3.7
+BuildRequires:	gtkmm-devel >= 2.3.8
 BuildRequires:	libgnomemm-devel >= 2.5.1
 BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,7 +28,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gconfmm-devel >= 2.5.1
 Requires:	gnome-panel-devel >= 2.6.0
-Requires:	gtkmm-devel >= 2.3.7
+Requires:	gtkmm-devel >= 2.3.8
 
 %description devel
 Devel files for libpanelappletmm.
