@@ -5,7 +5,7 @@ Version:	2.6.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/libpanelappletmm/2.6/%{name}-%{version}.tar.bz2
 # Source0-md5:	74368673013ca6fe470d2b3f4a06b1df
 URL:		http://www.gnome.org/
 BuildRequires:	gconfmm-devel >= 2.6.1
