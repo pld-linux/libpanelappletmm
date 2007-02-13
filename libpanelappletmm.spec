@@ -1,5 +1,5 @@
 Summary:	C++ wrappers for libpanel-applet library
-Summary(pl.UTF-8):   Interfejsy C++ dla biblioteki libpanel-applet
+Summary(pl.UTF-8):	Interfejsy C++ dla biblioteki libpanel-applet
 Name:		libpanelappletmm
 Version:	2.6.0
 Release:	1
@@ -23,7 +23,7 @@ Interfejsy C++ dla biblioteki libpanel-applet.
 
 %package devel
 Summary:	Devel files for libpanelappletmm
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libpanelappletmm
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libpanelappletmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gconfmm-devel >= 2.6.1
@@ -38,7 +38,7 @@ Pliki nagłówkowe dla libpanelappletmm.
 
 %package static
 Summary:	libpanelappletmm static library
-Summary(pl.UTF-8):   Biblioteka statyczna libpanelappletmm
+Summary(pl.UTF-8):	Biblioteka statyczna libpanelappletmm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
