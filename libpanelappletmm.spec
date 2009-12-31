@@ -1,17 +1,20 @@
 Summary:	C++ wrappers for libpanel-applet library
 Summary(pl.UTF-8):	Interfejsy C++ dla biblioteki libpanel-applet
 Name:		libpanelappletmm
-Version:	2.6.0
+Version:	2.26.0
 Release:	1
-License:	GPL
-Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/libpanelappletmm/2.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	74368673013ca6fe470d2b3f4a06b1df
+License:	LGPL v2+
+Group:		X11/Libraries
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libpanelappletmm/2.26/%{name}-%{version}.tar.bz2
+# Source0-md5:	def2bc3298dd9ffc3838bf5245e5939e
 URL:		http://www.gnome.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gconfmm-devel >= 2.6.1
-BuildRequires:	gnome-panel-devel >= 2.6.1
+BuildRequires:	gnome-panel-devel >= 2.26.0
 BuildRequires:	gtkmm-devel >= 2.4.1
 BuildRequires:	libgnomemm-devel >= 2.6.0
+BuildRequires:	libtool
 BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,10 +27,10 @@ Interfejsy C++ dla biblioteki libpanel-applet.
 %package devel
 Summary:	Devel files for libpanelappletmm
 Summary(pl.UTF-8):	Pliki nagłówkowe dla libpanelappletmm
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gconfmm-devel >= 2.6.1
-Requires:	gnome-panel-devel >= 2.6.1
+Requires:	gnome-panel-devel >= 2.26.0
 Requires:	gtkmm-devel >= 2.4.1
 
 %description devel
@@ -39,7 +42,7 @@ Pliki nagłówkowe dla libpanelappletmm.
 %package static
 Summary:	libpanelappletmm static library
 Summary(pl.UTF-8):	Biblioteka statyczna libpanelappletmm
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
@@ -52,6 +55,10 @@ Biblioteka statyczna libpanelappletmm.
 %setup -q
 
 %build
+%{__libtoolize}
+%{__aclocal} -I scripts
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 
@@ -72,16 +79,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_libdir}/libpanelappletmm*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libpanelappletmm-2.6.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libpanelappletmm-2.6.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libpanelappletmm*.so
-%{_libdir}/libpanelappletmm*.la
-%{_libdir}/%{name}-2.6
-%{_includedir}/%{name}-2.*
-%{_pkgconfigdir}/%{name}-2.6.pc
+%attr(755,root,root) %{_libdir}/libpanelappletmm-2.6.so
+%{_libdir}/libpanelappletmm-2.6.la
+%{_libdir}/libpanelappletmm-2.6
+%{_includedir}/libpanelappletmm-2.6
+%{_pkgconfigdir}/libpanelappletmm-2.6.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libpanelappletmm*.a
+%{_libdir}/libpanelappletmm-2.6.a
