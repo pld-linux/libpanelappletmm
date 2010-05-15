@@ -2,7 +2,7 @@ Summary:	C++ wrappers for libpanel-applet library
 Summary(pl.UTF-8):	Interfejsy C++ dla biblioteki libpanel-applet
 Name:		libpanelappletmm
 Version:	2.26.0
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libpanelappletmm/2.26/%{name}-%{version}.tar.bz2
@@ -16,6 +16,8 @@ BuildRequires:	gtkmm-devel >= 2.4.1
 BuildRequires:	libgnomemm-devel >= 2.6.0
 BuildRequires:	libtool
 BuildRequires:	perl-base
+BuildRequires:	pkgconfig
+BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
